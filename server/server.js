@@ -48,5 +48,6 @@ io.on('connection', socket => {
 //     res.end(`${req.params.user}: ${req.params.msg}`);
 // })
 
-http.listen(3000);
+const PORT = process.env.PORT || 3000
+http.listen(PORT, () => console.log(PORT + '*'));
 
