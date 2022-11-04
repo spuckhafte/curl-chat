@@ -42,7 +42,8 @@ function run() {
                         };
                         if (cmdName == '/help') {
                             let help = "Commands:\n/name=user_name (set name)\n/expose=0|1 (hide/show name)\n/whois=user_id (find by id)\n/online=id|name"
-                            console.log(help)
+                            console.log(help);
+                            run();
                         }
                     } else socket.emit('msg-from-client', msg, socket.id);
                 } else socket.emit('msg-from-client', msg, socket.id);
