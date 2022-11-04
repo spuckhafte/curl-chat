@@ -13,7 +13,7 @@ const internals = [
 const Console = require('./Console.js');
 new Console()
 
-const socket = io('http://localhost:3000');
+const socket = io('https://curl-chat-production.up.railway.app/');
 
 function run() {
     rl.getRL().question("> ", msg => {
