@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 const http = require('http').createServer()
 const io = require('socket.io')(http, {
     cors: { origin: "*" }
@@ -8,8 +7,12 @@ const users = {};
 
 io.on('connection', socket => {
     console.log(socket.id, 'connected');
-    users[socket.id] = ['undefined', true] // username, exposed?
-    io.emit('connected', socket.id);
+    socket.emit('verify');
+
+    socket.on('verified', () => {
+        users[socket.id] = ['default_name', true] // username, exposed?
+        io.emit('connected', socket.id);
+    })
 
     socket.on('msg-from-client', msg => {
         io.emit('msg-from-server', msg, socket.id)
@@ -43,11 +46,6 @@ io.on('connection', socket => {
         io.emit('user-left', socket.id);
     })
 })
-
-// app.get('/:user/:msg', (req, res) => {
-//     console.log(req.params)
-//     res.end(`${req.params.user}: ${req.params.msg}`);
-// })
 
 const PORT = process.env.PORT || 3000
 http.listen(PORT, () => console.log(PORT + '*'));

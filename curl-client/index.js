@@ -10,7 +10,7 @@ const internals = [
     "/help"
 ]
 
-const Console = require('./Console.js');
+const Console = require('./helper/Console.js');
 new Console()
 
 const socket = io('https://curl-chat-production.up.railway.app/');
@@ -41,7 +41,8 @@ function run() {
                             else socket.emit('msg-from-client', msg, socket.id);
                         };
                         if (cmdName == '/help') {
-                            let help = "/name=andrew (set name)\n/expose=0/1 (hide/show name)\n/whois=3c924923 (find by id)"
+                            let help = "Commands:\n/name=user_name (set name)\n/expose=0|1 (hide/show name)\n/whois=user_id (find by id)\n/online=id|name"
+                            console.log(help)
                         }
                     } else socket.emit('msg-from-client', msg, socket.id);
                 } else socket.emit('msg-from-client', msg, socket.id);
@@ -50,9 +51,15 @@ function run() {
     });
 }
 
+socket.on('verify', () => {
+    rl.getRL().question("Welcome to Curl Chat!\n/help => see inbuilt commands\npress enter to continue...", msg => {
+        socket.emit('verified')
+    });
+})
+
 socket.on('connected', id => {
-    run();
     console.log(`[${id}${socket.id == id ? '-you connectced]' : ' connected]'}`);
+    run();
 });
 
 socket.on('msg-from-server', (msg, from) => {
@@ -62,7 +69,7 @@ socket.on('msg-from-server', (msg, from) => {
 
 socket.on('user-found', (username, id) => {
     console.log(`[${id}: ${username}]`);
-    run()
+    run();
 })
 
 socket.on('online-found', (list, total) => {
@@ -73,10 +80,3 @@ socket.on('user-left', id => {
     console.log(`[${id} left]`);
     run();
 })
-
-async function input(t) {
-    try {
-        const answer = await rl.question(t);
-        return answer;
-    } catch (e) { null };
-}
