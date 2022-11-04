@@ -1,7 +1,5 @@
 {
   "dependencies": {
-    "dotenv": "^16.0.3",
-    "socket.io": "^4.5.3",
-    "top.gg-core": "^1.0.0-b"
+    "socket.io": "^4.5.3"
   }
 }
