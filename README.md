@@ -1,4 +1,4 @@
-# Curl Chat - Terminal Chat App
+# Curl-Terminal Chat App
 A global chat room from your terminal!<br>
 Chat securely, anonymously, globally.
 
