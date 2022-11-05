@@ -2,6 +2,8 @@
 A global chat room from your terminal!<br>
 Chat securely, anonymously, globally.
 
+**Data sent and received from the server is [encrypted](https://github.com/spuckhafte/encdenc)!**
+
 ## Inbuilt commands:
 1. `/name=jhon` : set your name (not compulsory)
 2. `/expose=0|1` : expose your name, can be found using id (0-false, 1-true)
