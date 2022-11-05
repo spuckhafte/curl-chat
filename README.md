@@ -1,6 +1,8 @@
-# Curl Chat - Terminal Chat App
+# Curl-Terminal Chat App
 A global chat room from your terminal!<br>
 Chat securely, anonymously, globally.
+
+**Data sent and received from the server is [encrypted](https://github.com/spuckhafte/encdenc)!**
 
 ## Inbuilt commands:
 1. `/name=jhon` : set your name (not compulsory)
