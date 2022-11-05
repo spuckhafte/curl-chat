@@ -49,9 +49,10 @@ io.on('connection', socket => {
     })
 
     socket.on('disconnect', () => {
+        if (!users[socket.id]) return;
         delete users[socket.id];
         io.emit('user-left', socket.id);
-    })
+    });
 })
 
 const PORT = process.env.PORT || 3000
