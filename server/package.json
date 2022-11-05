@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "dotenv": "^16.0.3",
+    "encdenc": "^1.0.3",
     "socket.io": "^4.5.3"
   }
 }
