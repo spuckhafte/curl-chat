@@ -1,7 +1,7 @@
 # Curl-Terminal Chat App
 [**DOWNLOAD ZIP**](https://github.com/spuckhafte/curl-chat#how)<br>
-A global chat room from your terminal!<br>
-Chat securely, anonymously, **globally** or in **privately in rooms**.
+A chat app from your terminal!<br>
+Chat securely, anonymously, **globally** or in **private rooms**.
 
 **Data sent and received from the server is [encrypted](https://github.com/spuckhafte/encdenc)!**
 
