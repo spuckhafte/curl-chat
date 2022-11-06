@@ -138,7 +138,7 @@ socket.on('connected', (id, password) => {
     console.log(`[${id}${socket.id == id ? '-you connectced]' : ' connected]'}`);
     password = JSON.parse(password);
     Machine.config = password;
-    run();
+    if (socket.id == id) run();
 });
 
 socket.on('msg-from-server', (msg, from, scope, showType, fromName) => {
@@ -150,7 +150,7 @@ socket.on('msg-from-server', (msg, from, scope, showType, fromName) => {
         }
         if (showType == 'name') console.log(`[${Machine.decrypt(fromName)}(${from.substr(0, 4)}...)]: ${msg}`);
     }
-    run();
+    if (from == socket.id) run();
 });
 
 socket.on('user-found', (username, id) => {
@@ -169,7 +169,7 @@ socket.on('online-found', (list, total) => {
 socket.on('room-join', (id, showType, username) => {
     username = Machine.decrypt(username);
     console.log(`[${id}${showType == 'name' ? `(${username})` : ""} joined room: ${room.id}]`);
-    run();
+    if (id == socket.id) run();
 });
 
 socket.on('room-join-fail', err => {
@@ -181,7 +181,7 @@ socket.on('room-join-fail', err => {
 socket.on('user-left', (id) => {
     if (room) return;
     console.log(`[${id} left]`);
-    run();
+    if (socket.id == id) run();
 });
 
 socket.on('host-left-room', () => {
@@ -193,7 +193,7 @@ socket.on('host-left-room', () => {
 socket.on('member-left-room', (userId, name) => {
     name = Machine.decrypt(name);
     console.log(`[${userId}(${name}) LEFT]`);
-    run();
+    if (socket.id == userId) run();
 })
 
 socket.on('you-left-room', (kick) => {
