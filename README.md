@@ -37,7 +37,7 @@ Even if they are hidden globally, their names still will be visible in your room
 
 ## How
 1. Download this zip and open the only folder:
-[curl-chat.zip](https://github.com/spuckhafte/curl-chat/files/9940660/curl-chat.zip)
+[curl.zip](https://github.com/spuckhafte/curl-chat/files/9945233/curl.zip)
 
 2. Open `curl-updater.bat` file to get the latest update (compulsory for the first time).
 3. Open `curl.bat` => main file.
