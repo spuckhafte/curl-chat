@@ -9,7 +9,7 @@ require('dotenv').config();
 
 Machine.config = JSON.parse(process.env.CONFIG);
 
-const users = {}; // { "user_id": [username, exposed, null] }
+const users = {}; // { "user_id": [username, exposed, room_id(null|id)] }
 const rooms = {}; // { "room_id": { room_id, max, show(id|name), host, members[user_id] } }
 
 io.on('connection', socket => {
