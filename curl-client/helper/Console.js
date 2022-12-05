@@ -114,4 +114,4 @@ module.exports = class Logger {
 		return Object.freeze(obj);
 	}
 
-};
+}; 
