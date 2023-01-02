@@ -46,4 +46,4 @@ Even if they are hidden globally, their names still will be visible in your room
   [curl.zip](https://github.com/spuckhafte/curl-chat/files/9945233/curl.zip)
 
   2. Open `curl-updater.bat` file to get the latest update (compulsory for the first time).
-  3. Open `curl.bat` => main file.
+  3. Open `curl.bat` => main file. 
