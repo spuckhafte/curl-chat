@@ -7,6 +7,7 @@ const Machine = new enc();
 const { v4 } = require('uuid')
 require('dotenv').config();
 
+console.log(process.env.CONFIG)
 Machine.config = JSON.parse(process.env.CONFIG);
 
 const users = {}; // { "user_id": [username, exposed, room_id(null|id)] }
