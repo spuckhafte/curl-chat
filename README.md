@@ -37,13 +37,9 @@ Even if they are hidden globally, their names still will be visible in your room
 
 ## How
 ### Exe:
-  1. [curl-windows.zip](https://github.com/spuckhafte/curl-chat/files/9945818/curl-windows.zip)<br>
-  2. [curl-linux.zip](https://github.com/spuckhafte/curl-chat/files/9945819/curl-linux.zip)<br>
-  3. [curl-macos.zip](https://github.com/spuckhafte/curl-chat/files/9945821/curl-macos.zip)<br>**Download and use, simple!**
-  
-### Pure NodeJs:
-  1. Download this zip and open the only folder:
-  [curl.zip](https://github.com/spuckhafte/curl-chat/files/9945233/curl.zip)
-
-  2. Open `curl-updater.bat` file to get the latest update (compulsory for the first time).
-  3. Open `curl.bat` => main file. 
+  1. [curl-windows.zip]([curl.zip](https://github.com/spuckhafte/curl-chat/files/13516534/curl.zip)
+)<br>
+  2. [curl-linux.zip]([curl.zip](https://github.com/spuckhafte/curl-chat/files/13516538/curl.zip)
+)<br>
+  3. [curl-macos.zip]([curl.zip](https://github.com/spuckhafte/curl-chat/files/13516540/curl.zip)
+)<br>**Download and use, simple!**
