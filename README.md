@@ -1,5 +1,5 @@
 # Curl-Terminal Chat App
-[**DOWNLOAD ZIP**](https://github.com/spuckhafte/curl-chat#how)<br>
+[**DOWNLOAD NOW**](https://github.com/spuckhafte/curl-chat#how)<br>
 A chat app from your terminal!<br>
 Chat securely, anonymously, **globally** or in **private rooms**.
 
@@ -36,10 +36,14 @@ Even if they are hidden globally, their names still will be visible in your room
 
 
 ## How
-### Exe:
-  1. [curl-windows.zip]([curl.zip](https://github.com/spuckhafte/curl-chat/files/13516534/curl.zip)
-)<br>
-  2. [curl-linux.zip]([curl.zip](https://github.com/spuckhafte/curl-chat/files/13516538/curl.zip)
-)<br>
-  3. [curl-macos.zip]([curl.zip](https://github.com/spuckhafte/curl-chat/files/13516540/curl.zip)
-)<br>**Download and use, simple!**
+ 1. Install the client:
+```
+git clone https://github.com/spuckhafte/curl-chat-client
+cd curl-chat-client
+npm i
+```
+ 2. Run with the latest server
+```
+cd ~/curl-chat-client
+node index.js https://8aif3k-ip-103-27-164-66.tunnelmole.net
+```
